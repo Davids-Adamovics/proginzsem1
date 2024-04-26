@@ -12,9 +12,9 @@ public interface IProductCRUDService {
 	
 	public abstract ArrayList<Product> retrieveAll() throws Exception;
 	
-	public abstract void updateById(int id, Product product);
+	public abstract void updateById(int id, Product product) throws Exception;
 	
-	public abstract void deleteById(int id);
+	public abstract void deleteById(int id) throws Exception;
 	
 	
 	
