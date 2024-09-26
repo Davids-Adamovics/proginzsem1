@@ -15,6 +15,9 @@ public interface IProductCRUDService {
 	public abstract void updateById(int id, Product product) throws Exception;
 	
 	public abstract void deleteById(int id) throws Exception;
+
+//	ArrayList<Product> filterByPriceMinMax(float min, float max) throws Exception;
+
 	
 	
 	

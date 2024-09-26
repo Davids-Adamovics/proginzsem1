@@ -46,7 +46,18 @@ public class ProductCRUDController {
 			return "error-page";
 		}
 	}
-	
+//	
+//	@GetMapping("/minmax")
+//	public String getProductMinMax(float min, float max) {
+//		
+//		try {
+//			
+//		} catch (Exception e) {
+//			
+//		}
+//		return null;
+//	}
+//	
 	
 	
 	

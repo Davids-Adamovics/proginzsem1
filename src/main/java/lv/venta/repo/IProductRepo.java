@@ -31,6 +31,8 @@ public interface IProductRepo extends CrudRepository<Product, Integer>{
 	@Query(nativeQuery = true, value = "SELECT SUM(price * quantity) FROM product_table;")
 	float calculateTotalValueFromRepoProducts();
 
+//	ArrayList<Product> findByPriceMinMax(float min, float max);
+
 	
 	
 	

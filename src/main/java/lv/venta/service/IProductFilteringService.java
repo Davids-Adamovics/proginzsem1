@@ -13,4 +13,6 @@ public interface IProductFilteringService {
 	
 	public abstract float calculateTotalValueOfProducts() throws Exception;
 	
+//	public abstract ArrayList<Product> filterByPriceMinMax(float min, float max) throws Exception;
+	
 }

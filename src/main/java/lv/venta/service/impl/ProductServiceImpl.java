@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import lv.venta.model.Product;
 import lv.venta.repo.IProductRepo;
 import lv.venta.service.IProductCRUDService;
@@ -123,6 +125,15 @@ public class ProductServiceImpl implements
 		
 		return totalValue;
 	}
+
+//	@Override
+//	public ArrayList<Product> filterByPriceMinMax(float min, float max) throws Exception {
+//		if(productRepo.count() == 0) throw new Exception("There are no products in the system");
+//		if(min <= 0) min = 0;
+//		
+//		ArrayList<Product> filteredProducts = productRepo.findByPriceMinMax(min, max);
+//		return filteredProducts;
+//	}
 
 
 }
