@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -40,6 +42,7 @@ public class MyUser
 	@NotNull
 	@Size(min = 8, max = 50)
 	@Column(name = "Password")
+	@OneToMany
 	private String password;
 	
 	
