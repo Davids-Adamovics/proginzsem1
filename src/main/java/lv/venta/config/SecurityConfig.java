@@ -22,7 +22,6 @@ public class SecurityConfig {
 		
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		
-		
 		UserDetails details1 = User.builder()
 				.username("Davids.A")
 				.password(encoder.encode("123"))
