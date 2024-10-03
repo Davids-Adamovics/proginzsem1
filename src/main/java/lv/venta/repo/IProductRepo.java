@@ -12,8 +12,7 @@ public interface IProductRepo extends CrudRepository<Product, Integer>{
 	//public abstract jau pēc noeklusejuma
 	//SELECT * FROM product_table 
 	//WHERE title= 1.arguments AND description= 2.arguments AND price= 3.arguments  
-	Product findByTitleAndDescriptionAndPrice
-	(String title, String description, float price);
+	Product findByTitleAndDescriptionAndPrice(String title, String description, float price);
 
 	//public abstract jau pēc noeklusejuma
 	//SELECT * FROM product_table WHERE price < 1.argumentu

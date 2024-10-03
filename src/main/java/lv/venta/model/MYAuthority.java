@@ -45,4 +45,5 @@ public class MYAuthority
 	private Collection users;
 	
 	
+	
 }

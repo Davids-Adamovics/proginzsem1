@@ -5,7 +5,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
@@ -42,13 +44,17 @@ public class MyUser
 	@NotNull
 	@Size(min = 8, max = 50)
 	@Column(name = "Password")
-	@OneToMany
 	private String password;
 	
+	@ManyToOne
+	@JoinColumn(name = "AuthorityID")
+	private MYAuthority authority;
 	
-	public MyUser(String username, String password) 
+	
+	public MyUser(String username, String password, MYAuthority authority) 
 	{
 		setUsername(username);
 		setPassword(password);
+		setAuthority(authority);
 	}
 }
