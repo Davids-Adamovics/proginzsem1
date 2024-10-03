@@ -1,6 +1,7 @@
 package lv.venta.model;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
+
+import java.util.Collection;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,22 +29,24 @@ import lombok.ToString;
 public class MYAuthority 
 {
 
+
 	@Setter(value = AccessLevel.NONE)
 	@Column(name = "UserId")
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)//autoincrement
 	private int AuthorityID;
 	
-	@NotNull
 	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-Z]**")
+	@Pattern(regexp = "[A-Z]*")
 	@Column(name = "title")
 	private String title;
 	
 	@OneToMany(mappedBy = "authority")
 	@ToString.Exclude
-	private Collection users;
-	
-	
+	private Collection<MyUser> users;
+
+	public MYAuthority(@Pattern(regexp = "[A-Z]{4,7}") String title) {
+		this.title = title;
+	}
 	
 }

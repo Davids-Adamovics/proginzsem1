@@ -34,15 +34,11 @@ public class MyUser
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)//autoincrement
 	private int userId;
-	
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅa-zēūīļķģšāžčņ ]+")
+
+//	@Size(min = 3, max = 50)
 	@Column(name = "Username")
 	private String username;
-	
-	@NotNull
-	@Size(min = 8, max = 50)
+
 	@Column(name = "Password")
 	private String password;
 	
